@@ -193,7 +193,7 @@ namespace SportsLeague.Domain.Services
             var tournamentTeams = await _tournamentTeamRepository
                 .GetByTournamentAsync(tournamentId);
 
-            return tournamentTeams; //Este select es un filtro para obtener solo los equipos relacionados al torneo
+            return tournamentTeams.Select(tt => tt.Team);
         }
     }
 }

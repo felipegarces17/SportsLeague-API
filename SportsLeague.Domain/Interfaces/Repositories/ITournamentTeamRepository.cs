@@ -5,6 +5,6 @@ namespace SportsLeague.Domain.Interfaces.Repositories
     public interface ITournamentTeamRepository : IGenericRepository<TournamentTeam>
     {
         Task<TournamentTeam?> GetByTournamentAndTeamAsync(int tournamentId, int teamId);
-        Task<IEnumerable<Team>> GetByTournamentAsync(int tournamentId);
+        Task<IEnumerable<TournamentTeam>> GetByTournamentAsync(int tournamentId);
     }
 }
